@@ -21,14 +21,14 @@ const UserSchema = mongoose.Schema({
         required: true,
         minlength: 8
     },
-    firstName: {
+    fullName: {
         type: String,
         required: true,
     },
-    lastName: {
-        type: String,
-        required: true,
-    },
+    // lastName: {
+    //     type: String,
+    //     required: true,
+    // },
     sessions: [{
         token: {
             type: String,

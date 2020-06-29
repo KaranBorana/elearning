@@ -63,8 +63,9 @@ router.post('/login', (req, res) => {
              * Now we construct and send the response to the user with their
              * auth tokens in the header and the user object in the body
              */
-            res
-                .header('x-refresh-token', authTokens.refreshToken)
+            console.log(authTokens.refreshToken);
+            console.log(authTokens.accessToken);
+            res.header('x-refresh-token', authTokens.refreshToken)
                 .header('x-access-token', authTokens.accessToken)
                 .send(user);
         })
